@@ -292,19 +292,6 @@ F 3 "" H 3450 3550 50  0001 C CNN
 	1    3450 3550
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+9V #PWR04
-U 1 1 5C477534
-P 3450 2700
-F 0 "#PWR04" H 3450 2550 50  0001 C CNN
-F 1 "+9V" H 3465 2873 50  0000 C CNN
-F 2 "" H 3450 2700 50  0001 C CNN
-F 3 "" H 3450 2700 50  0001 C CNN
-	1    3450 2700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3450 2750 3450 2700
 Connection ~ 3450 2750
 Text GLabel 4700 3150 2    50   Input ~ 0
 VREF
@@ -577,12 +564,12 @@ Wire Wire Line
 $Comp
 L power:+9V #PWR01
 U 1 1 5C4B109F
-P 2950 2700
-F 0 "#PWR01" H 2950 2550 50  0001 C CNN
-F 1 "+9V" H 2965 2873 50  0000 C CNN
-F 2 "" H 2950 2700 50  0001 C CNN
-F 3 "" H 2950 2700 50  0001 C CNN
-	1    2950 2700
+P 3100 2700
+F 0 "#PWR01" H 3100 2550 50  0001 C CNN
+F 1 "+9V" H 3115 2873 50  0000 C CNN
+F 2 "" H 3100 2700 50  0001 C CNN
+F 3 "" H 3100 2700 50  0001 C CNN
+	1    3100 2700
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -597,23 +584,11 @@ F 3 "" H 3100 3550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2750 2750 2950 2750
+	2950 2900 3100 2900
 Wire Wire Line
-	2950 2750 2950 2700
+	3100 2900 3100 2750
 Wire Wire Line
-	2750 2850 3100 2850
-Wire Wire Line
-	3100 2850 3100 3500
-Wire Wire Line
-	2750 3400 2950 3400
-Wire Wire Line
-	2950 3400 2950 2750
-Connection ~ 2950 2750
-Wire Wire Line
-	2750 3500 3100 3500
-Connection ~ 3100 3500
-Wire Wire Line
-	3100 3500 3100 3550
+	2950 3000 3100 3000
 Text Notes 7050 6100 0    50   ~ 0
 Note 1: Three SPDT switches fabricated as one 3PDT with second throw shunting Input to Output.
 Text Notes 7050 6250 0    50   ~ 0
@@ -628,7 +603,7 @@ U 1 1 5C462E43
 P 5350 2950
 F 0 "J3" H 5244 3135 50  0000 C CNN
 F 1 "Input" H 5244 3044 50  0000 C CNN
-F 2 "Connector_Wire:SolderWirePad_1x01_Drill0.8mm" H 5350 2950 50  0001 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill1mm" H 5350 2950 50  0001 C CNN
 F 3 "~" H 5350 2950 50  0001 C CNN
 	1    5350 2950
 	-1   0    0    -1  
@@ -639,7 +614,7 @@ U 1 1 5C463202
 P 6000 4600
 F 0 "J4" H 5894 4785 50  0000 C CNN
 F 1 "Return" H 5894 4694 50  0000 C CNN
-F 2 "Connector_Wire:SolderWirePad_1x01_Drill0.8mm" H 6000 4600 50  0001 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill1mm" H 6000 4600 50  0001 C CNN
 F 3 "~" H 6000 4600 50  0001 C CNN
 	1    6000 4600
 	-1   0    0    -1  
@@ -650,7 +625,7 @@ U 1 1 5C463452
 P 8850 3150
 F 0 "J5" H 8878 3176 50  0000 L CNN
 F 1 "Send" H 8878 3085 50  0000 L CNN
-F 2 "Connector_Wire:SolderWirePad_1x01_Drill0.8mm" H 8850 3150 50  0001 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill1mm" H 8850 3150 50  0001 C CNN
 F 3 "~" H 8850 3150 50  0001 C CNN
 	1    8850 3150
 	1    0    0    -1  
@@ -661,7 +636,7 @@ U 1 1 5C463635
 P 9350 4800
 F 0 "J6" H 9378 4826 50  0000 L CNN
 F 1 "Output" H 9378 4735 50  0000 L CNN
-F 2 "Connector_Wire:SolderWirePad_1x01_Drill0.8mm" H 9350 4800 50  0001 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill1mm" H 9350 4800 50  0001 C CNN
 F 3 "~" H 9350 4800 50  0001 C CNN
 	1    9350 4800
 	1    0    0    -1  
@@ -669,23 +644,12 @@ $EndComp
 $Comp
 L Connector:Conn_01x02_Female J1
 U 1 1 5C46EEDD
-P 2550 2750
-F 0 "J1" H 2444 2935 50  0000 C CNN
-F 1 "Power In" H 2444 2844 50  0000 C CNN
-F 2 "Connector_Wire:SolderWirePad_1x02_P3.81mm_Drill0.8mm" H 2550 2750 50  0001 C CNN
-F 3 "~" H 2550 2750 50  0001 C CNN
-	1    2550 2750
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x02_Female J2
-U 1 1 5C473BA2
-P 2550 3400
-F 0 "J2" H 2444 3585 50  0000 C CNN
-F 1 "Power Out" H 2444 3494 50  0000 C CNN
-F 2 "Connector_Wire:SolderWirePad_1x02_P3.81mm_Drill0.8mm" H 2550 3400 50  0001 C CNN
-F 3 "~" H 2550 3400 50  0001 C CNN
-	1    2550 3400
+P 2750 2900
+F 0 "J1" H 2644 3085 50  0000 C CNN
+F 1 "Power In" H 2644 2994 50  0000 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P3.81mm_Drill1mm" H 2750 2900 50  0001 C CNN
+F 3 "~" H 2750 2900 50  0001 C CNN
+	1    2750 2900
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -741,4 +705,11 @@ $EndComp
 NoConn ~ 9100 5000
 Wire Wire Line
 	9100 5000 9050 5000
+Wire Wire Line
+	3100 3000 3100 3550
+Wire Wire Line
+	3450 2750 3100 2750
+Connection ~ 3100 2750
+Wire Wire Line
+	3100 2750 3100 2700
 $EndSCHEMATC
