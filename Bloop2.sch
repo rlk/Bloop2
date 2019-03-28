@@ -171,12 +171,12 @@ $EndComp
 $Comp
 L power:+9V #PWR015
 U 1 1 5C390DD1
-P 6550 1500
-F 0 "#PWR015" H 6550 1350 50  0001 C CNN
-F 1 "+9V" H 6565 1673 50  0000 C CNN
-F 2 "" H 6550 1500 50  0001 C CNN
-F 3 "" H 6550 1500 50  0001 C CNN
-	1    6550 1500
+P 6550 1650
+F 0 "#PWR015" H 6550 1500 50  0001 C CNN
+F 1 "+9V" H 6565 1823 50  0000 C CNN
+F 2 "" H 6550 1650 50  0001 C CNN
+F 3 "" H 6550 1650 50  0001 C CNN
+	1    6550 1650
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -213,11 +213,11 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6650 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:TL072 U1
+L Amplifier_Operational:TL072 U2
 U 1 1 5C390DE9
 P 6650 1950
-F 0 "U1" H 6700 2317 50  0000 C CNN
-F 1 "TLE2072" H 6700 2226 50  0000 C CNN
+F 0 "U2" H 6750 2317 50  0000 C CNN
+F 1 "TLE2072" H 6750 2226 50  0000 C CNN
 F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 6650 1950 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6650 1950 50  0001 C CNN
 	1    6650 1950
@@ -247,8 +247,6 @@ Wire Wire Line
 	2950 2300 2600 2300
 Wire Wire Line
 	2950 2600 2950 2700
-Wire Wire Line
-	6550 1500 6550 1650
 Connection ~ 2600 2300
 $Comp
 L power:GND #PWR04
@@ -383,11 +381,11 @@ F 3 "~" H 7150 4100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Amplifier_Operational:TL072 U1
+L Amplifier_Operational:TL072 U2
 U 2 1 5C44A64A
 P 6650 4100
-F 0 "U1" H 6700 4467 50  0000 C CNN
-F 1 "TLE2072" H 6700 4376 50  0000 C CNN
+F 0 "U2" H 6750 4467 50  0000 C CNN
+F 1 "TLE2072" H 6750 4376 50  0000 C CNN
 F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 6650 4100 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6650 4100 50  0001 C CNN
 	2    6650 4100
@@ -416,14 +414,14 @@ F 3 "" H 7400 4600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4400 1950 4250 1950
+	4450 1950 4300 1950
 Wire Wire Line
-	4800 1850 5350 1850
+	4850 1850 5350 1850
 Connection ~ 5350 1850
 Wire Wire Line
-	8400 4450 8500 4450
+	8300 4450 8400 4450
 Wire Wire Line
-	7550 4350 8000 4350
+	7550 4350 7900 4350
 $Comp
 L Device:LED D1
 U 1 1 5C4657FE
@@ -519,12 +517,12 @@ robert.kooima@gmail.com
 $Comp
 L Connector:Conn_01x01_Female J2
 U 1 1 5C462E43
-P 4050 1950
-F 0 "J2" H 3944 2135 50  0000 C CNN
-F 1 "Input" H 3944 2044 50  0000 C CNN
-F 2 "Connector_Wire:SolderWirePad_1x01_Drill1mm" H 4050 1950 50  0001 C CNN
-F 3 "~" H 4050 1950 50  0001 C CNN
-	1    4050 1950
+P 4100 1950
+F 0 "J2" H 3994 2135 50  0000 C CNN
+F 1 "Input" H 3994 2044 50  0000 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill1mm" H 4100 1950 50  0001 C CNN
+F 3 "~" H 4100 1950 50  0001 C CNN
+	1    4100 1950
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -552,12 +550,12 @@ $EndComp
 $Comp
 L Connector:Conn_01x01_Female J5
 U 1 1 5C463635
-P 8700 4450
-F 0 "J5" H 8728 4476 50  0000 L CNN
-F 1 "Output" H 8728 4385 50  0000 L CNN
-F 2 "Connector_Wire:SolderWirePad_1x01_Drill1mm" H 8700 4450 50  0001 C CNN
-F 3 "~" H 8700 4450 50  0001 C CNN
-	1    8700 4450
+P 8600 4450
+F 0 "J5" H 8628 4476 50  0000 L CNN
+F 1 "Output" H 8628 4385 50  0000 L CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill1mm" H 8600 4450 50  0001 C CNN
+F 3 "~" H 8600 4450 50  0001 C CNN
+	1    8600 4450
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -598,25 +596,23 @@ Wire Wire Line
 $Comp
 L Switch:SW_SPDT SW2
 U 1 1 5C4896E9
-P 4600 1950
-F 0 "SW2" H 4600 2235 50  0000 C CNN
-F 1 "3PDTB" H 4600 2144 50  0000 C CNN
-F 2 "Custom:SolderWirePad_1x03_P9.60mm_Drill1.5mm" H 4600 1950 50  0001 C CNN
-F 3 "" H 4600 1950 50  0001 C CNN
-	1    4600 1950
+P 4650 1950
+F 0 "SW2" H 4650 2235 50  0000 C CNN
+F 1 "3PDTB" H 4650 2144 50  0000 C CNN
+F 2 "Custom:SolderWirePad_1x03_P9.60mm_Drill1.5mm" H 4650 1950 50  0001 C CNN
+F 3 "" H 4650 1950 50  0001 C CNN
+	1    4650 1950
 	1    0    0    1   
 $EndComp
-Wire Wire Line
-	4850 2050 4800 2050
 $Comp
 L Switch:SW_SPDT SW3
 U 1 1 5C48FA11
-P 8200 4450
-F 0 "SW3" H 8200 4735 50  0000 C CNN
-F 1 "3PDTC" H 8200 4644 50  0000 C CNN
-F 2 "Custom:SolderWirePad_1x03_P9.60mm_Drill1.5mm" H 8200 4450 50  0001 C CNN
-F 3 "" H 8200 4450 50  0001 C CNN
-	1    8200 4450
+P 8100 4450
+F 0 "SW3" H 8100 4735 50  0000 C CNN
+F 1 "3PDTC" H 8100 4644 50  0000 C CNN
+F 2 "Custom:SolderWirePad_1x03_P9.60mm_Drill1.5mm" H 8100 4450 50  0001 C CNN
+F 3 "" H 8100 4450 50  0001 C CNN
+	1    8100 4450
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
@@ -626,11 +622,9 @@ Wire Wire Line
 Connection ~ 1550 1900
 Wire Wire Line
 	1550 1900 1550 1850
-Wire Wire Line
-	7950 4550 8000 4550
-Text GLabel 7950 4550 0    50   Input ~ 0
+Text GLabel 7800 4750 3    50   Input ~ 0
 BYPASS
-Text GLabel 4850 2050 2    50   Input ~ 0
+Text GLabel 4950 2250 3    50   Input ~ 0
 BYPASS
 NoConn ~ 2900 3700
 Wire Wire Line
@@ -792,4 +786,12 @@ Wire Wire Line
 Connection ~ 5750 4000
 Wire Wire Line
 	6150 4200 6350 4200
+Wire Wire Line
+	4850 2050 4950 2050
+Wire Wire Line
+	4950 2050 4950 2250
+Wire Wire Line
+	7900 4550 7800 4550
+Wire Wire Line
+	7800 4550 7800 4750
 $EndSCHEMATC
