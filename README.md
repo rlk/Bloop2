@@ -1,2 +1,3 @@
 # Bloop2
-Boosted loop switcher circuit
+
+Boosted loop switcher circuit.
