@@ -2,7 +2,10 @@
 
 Boosted loop switcher circuit.
 
-![Rendered Image](Bloop2.jpeg)
+- [Schematic PDF](etc/Bloop2.pdf)
+- [Hammond 1590B Drill Template SVG](etc/Bloop2.svg)
+
+![Rendered Image](etc/Bloop2.jpeg)
 
 ## Design notes
 
@@ -27,7 +30,7 @@ Boosted loop switcher circuit.
 - D2 can be any Schottky larger than V+.
 	- They all cost the same.
 
-- RLED1 is specified at V+ = 9V, Vf = 2.2V, If = 20mA
+- RLED1 is specified at V+ = 9V, Vf = 2.2V, If = 20mA.
 	- (9.0 - 2.2) / 0.020 = 340Ω.
 	- Watch out for over-current on your LED with higher V+.
 		- Or don't. It's probably fine at 40mA.
