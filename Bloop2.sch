@@ -136,17 +136,6 @@ F 3 "~" H 5850 2000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C_Small C7
-U 1 1 5C390DB9
-P 7450 2100
-F 0 "C7" V 7221 2100 50  0000 C CNN
-F 1 "10u" V 7312 2100 50  0000 C CNN
-F 2 "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm" H 7450 2100 50  0001 C CNN
-F 3 "~" H 7450 2100 50  0001 C CNN
-	1    7450 2100
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:R R9
 U 1 1 5C390DBF
 P 6850 2750
@@ -345,17 +334,6 @@ F 1 "1u" V 5712 4200 50  0000 C CNN
 F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 5850 4200 50  0001 C CNN
 F 3 "~" H 5850 4200 50  0001 C CNN
 	1    5850 4200
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:C_Small C8
-U 1 1 5C44A626
-P 7450 4300
-F 0 "C8" V 7221 4300 50  0000 C CNN
-F 1 "10u" V 7312 4300 50  0000 C CNN
-F 2 "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm" H 7450 4300 50  0001 C CNN
-F 3 "~" H 7450 4300 50  0001 C CNN
-	1    7450 4300
 	0    1    1    0   
 $EndComp
 $Comp
@@ -793,5 +771,27 @@ F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 6950 2100 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6950 2100 50  0001 C CNN
 	3    6950 2100
 	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1_Small C7
+U 1 1 5CA30FC9
+P 7450 2100
+F 0 "C7" V 7221 2100 50  0000 C CNN
+F 1 "10u" V 7312 2100 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm" H 7450 2100 50  0001 C CNN
+F 3 "~" H 7450 2100 50  0001 C CNN
+	1    7450 2100
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:CP1_Small C8
+U 1 1 5CA3162F
+P 7450 4300
+F 0 "C8" V 7221 4300 50  0000 C CNN
+F 1 "10u" V 7312 4300 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm" H 7450 4300 50  0001 C CNN
+F 3 "~" H 7450 4300 50  0001 C CNN
+	1    7450 4300
+	0    -1   1    0   
 $EndComp
 $EndSCHEMATC
