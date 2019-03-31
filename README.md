@@ -22,7 +22,7 @@ Boosted loop switcher circuit.
 	- I spec the TLE2072 which is within spec at V+ = 18V. 
 
 - The PCB is sized and shaped to fit a Hammond 1590B.
-	- Extents are limited to 50mm x 50mm to fit the cheap option at dirtypcbs.com.
+	- Extents are limited to 50mm x 50mm to fit the cheap option at [DirtyPCBs].
 
 - The PCB layout dictates the pin pitch of the stomp switch.
 	- The current design specifies an E-Switch FS57003PLT2B2M2QE, which has 5.3mm x 4.8mm pitch.
@@ -46,7 +46,7 @@ Boosted loop switcher circuit.
 	- Though it's rational for the maximum Output gain to be lower than the maximum Send gain, if desired, since the loop is usually hotter than the line and Send usually amplifies while Output attenuates.
 
 - R3 and C3 form a high-pass filter on the input.
-	- The 3dB point is 1 / (2 pi R C) = 1.6Hz.
+	- The 3dB point is 1 / (2π R C) = 1.6Hz.
 
 - R3 = R5.
 	- As a rule, R5 >> R1.
@@ -54,16 +54,19 @@ Boosted loop switcher circuit.
 
 - Gain is 1 + R9 / R7.
 	- With R9 = 22K and R7 = 2.2K, voltage gain is 11.
-	- Keep these low to eliminate noise. Near-zero current flows here.
+	- Keep R7 and R9 low to eliminate noise. Effectively zero current flows here.
 
 - C5 is needed to eliminate DC gain, but incurs a high-pass filter on the feedback.
 	- The value is selected to impedance match R7 at a frequency well below the audio band.
-	- The 3db point is 1 / (2 pi R C) = 1.5Hz.
-	- The motivation to keep R7 and R9 small leads to large C5 [AoE 4.2.2.A].
+	- The 3db point is 1 / (2π R C) = 1.5Hz.
+	- The motivation to keep R7 and R9 small leads to large C5 ([AoE] 4.2.2.A).
 
 - C7 and RV1 form a high-pass filter on the output.
-	- The 3dB point is 1 / (2 pi R C) = 1.6Hz.
+	- The 3dB point is 1 / (2π R C) = 1.6Hz.
 	- Larger RV1 permits a smaller C7 if desired.
-	- This need not be polar, but capacitor type seems to a have a significant impact on color here.
+	- C7 need not be polar, but capacitor type seems to a have a significant impact on color here.
 
 - Pin 3 of RV1 and RV2 must be grounded, but it's not strictly necessary to ground at the given PCB pad.
+
+[AoE]: https://artofelectronics.net
+[DirtyPCBs]: https://dirtypcbs.com
