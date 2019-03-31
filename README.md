@@ -2,7 +2,7 @@
 
 Boosted loop switcher circuit.
 
-![Rendered Image][Bloop2.png]
+![Rendered Image](Bloop2.jpeg)
 
 ## Design notes
 
