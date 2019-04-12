@@ -18,27 +18,29 @@ Boosted loop switcher circuit.
 	- Op amp selection will not make a significant difference in color, as this circuit remains squarely within the common mode when correctly powered.
 
 - The voltage requirement is entirely determined by the op amp. 
-	- Many op amps will want to see V+ between 9V and 15V.
-	- I spec the TLE2072 which is within spec at V+ = 18V. 
+	- I use a TLE2072 which is within spec at either V+ = 9V or 18V. 
 
 - The PCB is sized and shaped to fit a Hammond 1590B.
-	- Extents are limited to 50mm x 50mm to fit the cheap option at [DirtyPCBs].
+	- The 1590B is 56mm wide overall, but only 44mm wide at the ends. Thus the cutouts.
+	- The PCB is limited to 50mm x 50mm to fit the cheap option at [DirtyPCBs].
 
 - The PCB layout dictates the pin pitch of the stomp switch.
 	- The current design specifies an E-Switch FS57003PLT2B2M2QE, which has 5.3mm x 4.8mm pitch.
 
 - D2 can be any Schottky larger than V+.
-	- They all cost the same.
+	- They tend to cost the same regardless of voltage.
 
-- RLED1 is specified at V+ = 9V, Vf = 2.2V, If = 20mA.
-	- (9.0 - 2.2) / 0.020 = 340Ω.
+- The LED is specified at V+ = 9V, Vf = 2.2V, If = 20mA.
+	- RLED1 = (9.0 - 2.2) / 0.020 = 340Ω.
 	- Watch out for over-current on your LED with higher V+.
 		- Or don't. It's probably fine at 40mA.
 
 - R1 = R2.
 	- They form a voltage divider giving the reference voltage.
 
-- C1 and C2 values are cargo-culted from common designs.
+- C1 and C2 values are cargo-culted to 47uF from common designs.
+	- These values are pretty arbitrary.
+		- Though the circuit will take a moment to start up if too small.
 	- They match C5 and C6 by coincidence. I guess this eases sourcing.
 
 - The two channels are identical.
@@ -46,7 +48,7 @@ Boosted loop switcher circuit.
 	- Though it's rational for the maximum Output gain to be lower than the maximum Send gain, if desired, since the loop is usually hotter than the line and Send usually amplifies while Output attenuates.
 
 - R3 and C3 form a high-pass filter on the input.
-	- The 3dB point is 1 / (2π R C) = 1.6Hz.
+	- The 3dB point is 1 / (2π R3 C3) = 1.6Hz.
 
 - R3 = R5.
 	- As a rule, R5 >> R1.
@@ -58,11 +60,11 @@ Boosted loop switcher circuit.
 
 - C5 is needed to eliminate DC gain, but incurs a high-pass filter on the feedback.
 	- The value is selected to impedance match R7 at a frequency well below the audio band.
-	- The 3db point is 1 / (2π R C) = 1.5Hz.
+	- The 3db point is 1 / (2π R7 C5) = 1.5Hz.
 	- The motivation to keep R7 and R9 small leads to large C5 ([AoE] 4.2.2.A).
 
 - C7 and RV1 form a high-pass filter on the output.
-	- The 3dB point is 1 / (2π R C) = 1.6Hz.
+	- The 3dB point is 1 / (2π RV1 C7) = 1.6Hz.
 	- Larger RV1 permits a smaller C7 if desired.
 	- C7 need not be polar, but capacitor type seems to a have a significant impact on color here.
 
