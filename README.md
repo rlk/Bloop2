@@ -1,6 +1,6 @@
-# Bloop2
+# Bloop2 -- Dual Op-Amp Boosted Loop Switcher
 
-Dual Op-Amp Boosted Loop Switcher.
+Bloop2 is an effects loop switcher. It has Instrument Input and Amplifier Output jacks, plus effects loop Send and Return jacks with a single stomp button to switch that loop in or out. But because it's often desirable to run the effects loop louder than the instrument signal, Bloop2 provides volume controls at both the Send and Return, with a maximum gain of around 10. When switched off, the circuit is fully bypassed.
 
 - [Schematic PNG](etc/Bloop2-Schematic.png)
 - [Schematic PDF](etc/Bloop2-Schematic.pdf)
