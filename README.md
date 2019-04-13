@@ -1,11 +1,14 @@
 # Bloop2
 
-Boosted loop switcher circuit.
+Dual Op-Amp Boosted Loop Switcher.
 
-- [Schematic PDF](etc/Bloop2.pdf)
-- [Hammond 1590B Drill Template SVG](etc/Bloop2.svg)
+- [Schematic PNG](etc/Bloop2-Schematic.png)
+- [Schematic PDF](etc/Bloop2-Schematic.pdf)
+- [Hammond 1590B Drill Template SVG](etc/Bloop2-Drill-Template.svg)
 
-![Rendered Image](etc/Bloop2.jpeg)
+![Render](etc/Bloop2-Render.jpeg)
+![Enclosure](etc/Bloop2-Enclosure.jpeg)
+![Guts](etc/Bloop2-Guts.jpeg)
 
 ## Design notes
 
@@ -69,6 +72,8 @@ Boosted loop switcher circuit.
 	- C7 need not be polar, but capacitor type seems to a have a significant impact on color here.
 
 - Pin 3 of RV1 and RV2 must be grounded, but it's not strictly necessary to ground at the given PCB pad.
+
+- The circuit and signal grounds are completely separate, as designed. You'll probably want to tie them together. This is most easily done off-board, by wiring the negative terminal of the power jack to the sleeve terminal of one of the audio jacks.
 
 [AoE]: https://artofelectronics.net
 [DirtyPCBs]: https://dirtypcbs.com
