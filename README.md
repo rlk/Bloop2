@@ -5,10 +5,12 @@ Dual Op-Amp Boosted Loop Switcher.
 - [Schematic PNG](etc/Bloop2-Schematic.png)
 - [Schematic PDF](etc/Bloop2-Schematic.pdf)
 - [Hammond 1590B Drill Template SVG](etc/Bloop2-Drill-Template.svg)
+- [PCB Prerendering](etc/Bloop2-Render.jpeg)
 
-![Render](etc/Bloop2-Render.jpeg)
-![Enclosure](etc/Bloop2-Enclosure.jpeg)
-![Guts](etc/Bloop2-Guts.jpeg)
+Finished photos:
+
+- [Enclosure](etc/Bloop2-Enclosure.jpeg)
+- [Guts](etc/Bloop2-Guts.jpeg)
 
 ## Design notes
 
