@@ -1,4 +1,4 @@
-# Bloop2 -- Dual Op-Amp Boosted Loop Switcher
+# Bloop2 : Dual Op-Amp Boosted Loop Switcher
 
 Bloop2 is an effects loop switcher. It has Instrument Input and Amplifier Output jacks, plus effects loop Send and Return jacks with a single stomp button to switch that loop in or out. But because it's often desirable to run the effects loop louder than the instrument signal, Bloop2 provides volume controls at both the Send and Return, with a maximum gain of around 10. When switched off, the circuit is fully bypassed.
 
@@ -77,6 +77,22 @@ Finished photos:
 - Pin 3 of RV1 and RV2 must be grounded, but it's not strictly necessary to ground at the given PCB pad.
 
 - The circuit and signal grounds are completely separate, as designed. You'll probably want to tie them together. This is most easily done off-board, by wiring the negative terminal of the power jack to the sleeve terminal of one of the audio jacks.
+
+## Analysis
+
+To measure the circuit's effect on the input, here are a few screenshots from my scope. These show one channel of the device acting on a 1Hz 1Vpp square wave. Channel 1 displays the Instrument Input, at the top, and channel 2 displays the Send output, at the bottom. The volume is tuned to unity. The two traces appear identical.
+
+![Both traces][etc/scope/scope-R-AB.jpg]
+
+To observe an effect, examine the difference between the input and output, zoomed greatly. Here we see noise on the scale of 10mV peak-to-peak, centered on zero. Spikes appear at the transitions indicating a tiny phase shift in the output. The difference, for the most part, remains near zero.
+
+![Difference][etc/scope/scope-R-diff.jpg]
+
+To quantify the effect, take a running average of the difference to eliminate noise. This demonstrates a minor deviation from square of about 5mV, or 0.5% of the amplitude of the input, well within the noise.
+
+![Average][etc/scope/scope-R-avg.jpg]
+
+Performance of the other channel is effectively identical.
 
 [AoE]: https://artofelectronics.net
 [DirtyPCBs]: https://dirtypcbs.com
