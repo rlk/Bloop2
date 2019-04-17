@@ -82,15 +82,15 @@ Finished photos:
 
 To measure the circuit's effect on the input, here are a few screenshots from my scope. These show one channel of the device acting on a 1Hz 1Vpp square wave. Channel 1 displays the Instrument Input, at the top, and channel 2 displays the Send output, at the bottom. The volume is tuned to unity. The two traces appear identical.
 
-![Both traces][etc/scope/scope-R-AB.jpg]
+![Both traces](etc/scope/scope-traces.jpg)
 
 To observe an effect, examine the difference between the input and output, zoomed greatly. Here we see noise on the scale of 10mV peak-to-peak, centered on zero. Spikes appear at the transitions indicating a tiny phase shift in the output. The difference, for the most part, remains near zero.
 
-![Difference][etc/scope/scope-R-diff.jpg]
+![Difference](etc/scope/scope-difference.jpg)
 
 To quantify the effect, take a running average of the difference to eliminate noise. This demonstrates a minor deviation from square of about 5mV, or 0.5% of the amplitude of the input, well within the noise.
 
-![Average][etc/scope/scope-R-avg.jpg]
+![Average](etc/scope/scope-average.jpg)
 
 Performance of the other channel is effectively identical.
 
