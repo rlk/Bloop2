@@ -1,4 +1,4 @@
-# Bloop2 : Dual Op-Amp Boosted Loop Switcher
+# Bloop2 — Dual Op-Amp Boosted Loop Switcher
 
 Bloop2 is an effects loop switcher. It has Instrument Input and Amplifier Output jacks, plus effects loop Send and Return jacks with a single stomp button to switch that loop in or out. But because it's often desirable to run the effects loop louder than the instrument signal, Bloop2 provides volume controls at both the Send and Return, with a maximum gain of around 10. When switched off, the circuit is fully bypassed.
 
@@ -80,17 +80,29 @@ Finished photos:
 
 ## Analysis
 
-To measure the circuit's effect on the input, here are a few screenshots from my scope. These show one channel of the device acting on a 1Hz 1Vpp square wave. Channel 1 displays the Instrument Input, at the top, and channel 2 displays the Send output, at the bottom. The volume is tuned to unity. The two traces appear identical.
+To measure the circuit's effect on the input, here are a few screenshots from my scope. These show one channel of the device acting on a 1Hz 1Vpp square wave. Channel 1 displays the Instrument Input, at the bottom, and channel 2 displays the Send output, at the top. The volume is tuned to unity. The two traces appear identical.
 
-![Both traces](etc/scope/scope-traces.jpg)
+![Both traces](etc/scope/trace-both.jpg)
 
-To observe an effect, examine the difference between the input and output, zoomed greatly. Here we see noise on the scale of 10mV peak-to-peak, centered on zero. Spikes appear at the transitions indicating a tiny phase shift in the output. The difference, for the most part, remains near zero.
+To see a difference, zoom in on the waveform.
 
-![Difference](etc/scope/scope-difference.jpg)
+![Zoomed](etc/scope/trace-both-zoom.jpg)
 
-To quantify the effect, take a running average of the difference to eliminate noise. This demonstrates a minor deviation from square of about 5mV, or 0.5% of the amplitude of the input, well within the noise.
+To analyze this, compute the difference between the input and output, similarly zoomed. We see noise on the scale of 10mV peak-to-peak, centered on zero. Spikes appear at the transitions indicating a tiny phase shift in the output. The difference, for the most part, remains near zero.
 
-![Average](etc/scope/scope-average.jpg)
+![Difference](etc/scope/trace-difference.jpg)
+
+To quantify this effect, compute the running average of the difference to eliminate noise. This demonstrates a minor deviation from square of about 5mV, or 0.5% of the amplitude of the input, well within the noise.
+
+![Average](etc/scope/trace-difference-average.jpg)
+
+The spike in the difference indicates a tiny phase shift in the output. Reducing the time interval lets us quantify it.
+
+![Offset](etc/scope/trace-offset.jpg)
+
+Smoothing shows this delay to be around 1 microsecond.
+
+![Smoothed](etc/scope/trace-offset-average.jpg)
 
 Performance of the other channel is effectively identical.
 
